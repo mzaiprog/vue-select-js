@@ -1,6 +1,5 @@
 import rm from 'rimraf'
 import path from 'path'
-import ts from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 import resolve from '@rollup/plugin-node-resolve'
 import globals from 'rollup-plugin-node-globals'
@@ -29,13 +28,12 @@ formats.forEach(format => {
     plugins: [
       json(),
       vue(),
-      ts(),
       svg({ base64: true }),
       resolve(),
       globals(),
       babel({
         babelHelpers: 'bundled',
-        extensions: ['.js', '.ts', '.vue'],
+        extensions: ['.js', '.vue'],
       }),
     ],
     output: {
@@ -67,7 +65,7 @@ formats.forEach(format => {
   })
 })
 
-const isWatchMode = JSON.parse(process.env.npm_config_argv).original.includes('--watch')
+const isWatchMode = process.env.npm_config_argv ? JSON.parse(process.env.npm_config_argv).original.includes('--watch') : false;
 configs[configs.length - 1].plugins.push(
   copy({
     watch: isWatchMode ? ['src/index.css'] : false,
