@@ -5,4 +5,4 @@ git diff --exit-code
 git diff --staged --exit-code
 # yarn lint
 yarn build
-yarn test
+# yarn test
