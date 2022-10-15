@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### [2.10.4.?] (2022-10-15)
 ### Bug Fixes
 
-* null selection results in exception, terminating template redering
+* null selection results in exception, terminating template rendering
 
 ### [2.10.4](https://github.com/iendeavor/vue-next-select/compare/v2.10.3...v2.10.4) (2022-03-25)
 
