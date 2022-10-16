@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.10.4.?] (2022-10-16)
+### Features
+
+* search:blur & search:focus emit search field.value now, making it easier to get the exact search text value 
+
 ### [2.10.4.?] (2022-10-15)
 ### Bug Fixes
 
