@@ -257,7 +257,7 @@ const VueSelect = defineComponent({
                         if (inputEl.value !== document.activeElement) {
                             inputEl.value.focus()
                         }
-                        context.emit('search:focus')
+                        context.emit('search:focus', inputEl.value)
                     } else {
                         wrapper.value?.focus()
                     }
@@ -267,7 +267,7 @@ const VueSelect = defineComponent({
                             inputEl.value.blur()
                         }
                         if (props.clearOnClose) clearInput()
-                        context.emit('search:blur')
+                        context.emit('search:blur', inputEl.value)
                     } else {
                         wrapper.value?.blur()
                     }
