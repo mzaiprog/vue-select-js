@@ -156,6 +156,11 @@ const VueSelect = defineComponent({
             default: 'Type to search',
             type: String,
         },
+        searchPreFill: {
+            default: '',
+            type: String,
+        },
+
         clearOnSelect: {
             default: false,
             type: Boolean,
@@ -300,7 +305,7 @@ const VueSelect = defineComponent({
         )
 
         // input
-        const searchingInputValue = ref('')
+        const searchingInputValue = ref(props.searchPreFill)
         const handleInputForInput = event => {
             context.emit('search:input', event)
         }
